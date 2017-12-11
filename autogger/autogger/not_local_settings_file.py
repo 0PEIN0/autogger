@@ -23,10 +23,13 @@ if 'test' in sys.argv:
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = [
     '--with-coverage',
-    '--cover-package=core,jira,github',
+    '--cover-package=core,jira,github,user',
     '--cover-html',
     '--cover-erase'
 ]
 
 ALLOWED_HOSTS = ['localhost', ]
 ROOT_SITE_DOMAIN = 'http://localhost:8090/'
+
+DJANGO_ADMIN_SUPER_USER_EMAIL = 'john-doe@example.com'
+DJANGO_ADMIN_SUPER_USER_PASSWORD = 'EXAMPLE_PASSWORD'

@@ -99,6 +99,7 @@ PREREQ_APPS = [
     'django_celery_beat',
 ]
 PROJECT_APPS = [
+    'user',
     'core',
     'jira',
     'github',
@@ -135,9 +136,12 @@ JWT_CONFIG = {
     'SECRET_KEY': SECRET_KEY,
     'EXPIRATION_TIME': 86400 * 1,  # 1 Day(s)
 }
+AUTH_USER_MODEL = 'user.User'
 CORS_ORIGIN_ALLOW_ALL = True
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+DJANGO_ADMIN_SUPER_USER_EMAIL = ''
+DJANGO_ADMIN_SUPER_USER_PASSWORD = ''
 try:
     from .local_settings import *
 except ImportError:
