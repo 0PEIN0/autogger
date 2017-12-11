@@ -1,0 +1,12 @@
+ALTER ROLE postgres_user SET client_encoding TO 'utf8';
+ALTER ROLE postgres_user SET default_transaction_isolation TO 'read committed';
+ALTER ROLE postgres_user SET timezone TO 'UTC';
+drop database if exists autogger ;
+create database autogger ;
+grant all privileges on database autogger to postgres_user ;
+alter role postgres_user superuser;
+ALTER USER postgres_user CREATEDB;
+drop database if exists test_autogger ;
+create database test_autogger ;
+grant all privileges on database test_autogger to postgres_user ;
+grant all privileges on database test_autogger to postgres ;
