@@ -1,5 +1,7 @@
 # Autogger Project
 
+[![Build Status](https://semaphoreci.com/api/v1/0pein0/autogger/branches/develop/badge.svg)](https://semaphoreci.com/0pein0/autogger)
+
 #### Project Stacks:
 1. Django 2.0
 2. Postgres 9.6
