@@ -1,4 +1,4 @@
-ALTER USER postgres PASSWORD 'postgres_user_pasword' ;
+ALTER USER postgres PASSWORD 'postgres_user_password' ;
 drop database if exists autogger ;
 CREATE DATABASE autogger ;
 DO
@@ -9,8 +9,8 @@ BEGIN
       FROM   pg_catalog.pg_user
       WHERE  usename = 'postgres_user') THEN
 
-      CREATE ROLE postgres_user LOGIN PASSWORD 'postgres_user_pasword';
-      CREATE USER postgres_user WITH PASSWORD 'postgres_user_pasword' ;
+      CREATE ROLE postgres_user LOGIN PASSWORD 'postgres_user_password';
+      CREATE USER postgres_user WITH PASSWORD 'postgres_user_password' ;
    END IF;
 END
 $body$;
