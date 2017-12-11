@@ -145,4 +145,18 @@ try:
     from .local_settings import *
 except ImportError:
     print('Could not import local settings file. Please check the existace of the file.')
+# For Heroku
+if 'HEROKU_ENV' in os.environ:
+    DEBUG = False
+    ROOT_SITE_DOMAIN = os.environ['ROOT_SITE_DOMAIN']
+    ALLOWED_HOSTS.append(os.environ['HEROKU_HOST'])
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+    STATICFILES_DIRS = (
+        os.path.join(PROJECT_ROOT, 'static'),
+    )
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+    import dj_database_url
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'] = dj_database_url.config()
 # CUSTOM SECTION ENDS HERE
