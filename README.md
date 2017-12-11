@@ -1,5 +1,10 @@
 # Autogger Project
 
+#### Project Stacks:
+1. Django 2.0
+2. Postgres 9.6
+3. Angular 5
+
 #### Setup Instructions:
 
 1. Make sure that [bash-helpers](https://github.com/0PEIN0/bash-helpers) repository is cloned on local machine.
@@ -12,8 +17,12 @@ fi;
 3. Run `al_ve_init` from command line.
 4. Run `al_ve_installs` from command line.
 5. Create `local_settings.py` file in `$SYSTEM_ROOT_GIT_REPO_FOLDER/autogger/autogger/autogger` folder. Sample `local_settings.py` file can be found here: `$SYSTEM_ROOT_GIT_REPO_FOLDER/autogger/autogger/autogger/not_local_settings_file.py`.
-6. Run `al_psql_reset` from command line.
-8. Run `al_init_data_load` from command line.
-7. Run `al_bcr develop` from command line.
+6. Run `al_postgres_user_password_reset` from command line.
+7. Run `al_psql_reset` from command line.
+8. Run `al_ve` from command line.
+9. Run `./manage.py makemigrations` from command line.
+10. Run `./manage.py migrate` from command line.
+11. Run `al_init_data_load` from command line.
+12. Run `al_bcr develop` from command line.
 
 You're now all set.

@@ -1,4 +1,3 @@
-ALTER USER postgres PASSWORD 'postgres_user_password' ;
 drop database if exists autogger ;
 CREATE DATABASE autogger ;
 DO
