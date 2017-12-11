@@ -23,6 +23,6 @@ fi;
 9. Run `./manage.py makemigrations` from command line.
 10. Run `./manage.py migrate` from command line.
 11. Run `al_init_data_load` from command line.
-12. Run `al_bcr develop` from command line.
+12. Run `al_bcr develop` from command line. This command will start up the project on `8090` port. Visit ***http://localhost:8090/admin/*** to browse django admin.
 
 You're now all set.
