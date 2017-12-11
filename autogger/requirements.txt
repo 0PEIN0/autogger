@@ -33,7 +33,6 @@ ptyprocess==0.5.2
 Pygments==2.2.0
 python-magic==0.4.15
 pytz==2017.3
-raven==6.3.0
 rstr==2.2.6
 simplegeneric==0.8.1
 six==1.11.0
